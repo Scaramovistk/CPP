@@ -6,17 +6,17 @@
 /*   By: gscarama <gscarama@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/09 13:52:53 by gscarama          #+#    #+#             */
-/*   Updated: 2023/02/09 15:38:05 by gscarama         ###   ########.fr       */
+/*   Updated: 2023/02/17 15:00:08 by gscarama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CONTACT_HPP
 # define CONTACT_HPP
 
-#include "main.hpp"
+#include <iostream>
 
 void		printStd(std::string str);
-std::string	fillFilds(void);
+std::string	fillFilds(std::string str);
 
 class Contact
 {
@@ -28,8 +28,11 @@ class Contact
 		std::string	_darkstSecret;
 
 	public:
-		void	addContact();
-		//Function to check if the Espace is filled
+		void		add();
+		void		printContact();
+		std::string	takeFname();
+		std::string	takeLname();
+		std::string	takeNick();
 };
 
 #endif

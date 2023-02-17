@@ -6,11 +6,11 @@
 /*   By: gscarama <gscarama@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/04 15:22:08 by gscarama          #+#    #+#             */
-/*   Updated: 2023/02/09 15:19:12 by gscarama         ###   ########.fr       */
+/*   Updated: 2023/02/17 15:27:49 by gscarama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "main.hpp"
+#include "PhoneBook.hpp"
 
 void	receptionist(int op)
 {
@@ -47,19 +47,19 @@ int	main(void)
 		std::getline(std::cin, str);
 		if (str == "ADD")
 		{
-			// ft_add_contact(&row, phoneBook);
-			// ft_print_booklist(phoneBook);
-			//When all fields are complete add contact to phone book
+			phoneBook.addContact(row);
+			row++;
 		}
 		else if (str == "SEARCH")
 		{
-			//Display the saved contacts as a list of 4 columns: index, first name, last name and nickname.
-			//Must be 10 char wide pipe separete them
+			phoneBook.searchContact();
+			showContact(phoneBook, row);
 		}
 		else if (str == "EXIT")
 			receptionist(1);
 		else
 			printStd("Wrong input try again");
+		std::cout << "Type a command (ADD, SEARCH or EXIT):" << std::endl;
 	}
 	return (0);
 }
