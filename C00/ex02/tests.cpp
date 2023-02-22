@@ -13,7 +13,7 @@
 #include "Account.hpp"
 
 
-int		main( void ) {
+int		main( void ){
 
 	typedef std::vector<Account::t>							  accounts_t;
 	typedef std::vector<int>								  ints_t;
@@ -28,7 +28,7 @@ int		main( void ) {
 	int	const			d[]			= { 5, 765, 564, 2, 87, 23, 9, 20 };
 	size_t const		d_size( sizeof(d) / sizeof(int) );
 	ints_t				deposits( d, d + d_size );
-	ints_t::iterator	dep_begin	= deposits.begin();
+	ints_t::iterator	dep_begin	= deposits.begin(); //Return pointer to the first element
 	ints_t::iterator	dep_end		= deposits.end();
 
 	int	const			w[]			= { 321, 34, 657, 4, 76, 275, 657, 7654 };
