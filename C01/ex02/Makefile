@@ -5,15 +5,14 @@
 #                                                     +:+ +:+         +:+      #
 #    By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2023/02/17 16:00:24 by gscarama          #+#    #+#              #
-#    Updated: 2023/02/23 16:21:39 by gabriel          ###   ########.fr        #
+#    Created: 2023/02/23 16:28:32 by gabriel           #+#    #+#              #
+#    Updated: 2023/02/23 16:29:38 by gabriel          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = Account
+NAME = reference
 
-SRC =	Account.cpp\
-		tests.cpp
+SRC =	main.cpp
 
 OBJS = ${SRC:.c=.o}
 

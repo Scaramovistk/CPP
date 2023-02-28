@@ -5,15 +5,16 @@
 #                                                     +:+ +:+         +:+      #
 #    By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2023/02/17 16:00:24 by gscarama          #+#    #+#              #
-#    Updated: 2023/02/23 16:21:39 by gabriel          ###   ########.fr        #
+#    Created: 2023/02/23 15:53:38 by gabriel           #+#    #+#              #
+#    Updated: 2023/02/23 16:24:48 by gabriel          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = Account
+NAME = zombies
 
-SRC =	Account.cpp\
-		tests.cpp
+SRC = main.cpp\
+			Zombie.cpp\
+			zombieHorde.cpp
 
 OBJS = ${SRC:.c=.o}
 

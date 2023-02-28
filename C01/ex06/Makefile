@@ -5,15 +5,15 @@
 #                                                     +:+ +:+         +:+      #
 #    By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2023/02/17 16:00:24 by gscarama          #+#    #+#              #
-#    Updated: 2023/02/23 16:21:39 by gabriel          ###   ########.fr        #
+#    Created: 2023/02/28 11:53:18 by gabriel           #+#    #+#              #
+#    Updated: 2023/02/28 14:37:31 by gabriel          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = Account
+NAME = HarlFilter
 
-SRC =	Account.cpp\
-		tests.cpp
+SRC =	main.cpp\
+		Harl.cpp
 
 OBJS = ${SRC:.c=.o}
 

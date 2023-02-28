@@ -5,15 +5,17 @@
 #                                                     +:+ +:+         +:+      #
 #    By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2023/02/17 16:00:24 by gscarama          #+#    #+#              #
-#    Updated: 2023/02/23 16:21:39 by gabriel          ###   ########.fr        #
+#    Created: 2023/02/25 11:30:33 by gabriel           #+#    #+#              #
+#    Updated: 2023/02/25 12:49:24 by gabriel          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = Account
+NAME = humanWar
 
-SRC =	Account.cpp\
-		tests.cpp
+SRC =	main.cpp\
+		HumanA.cpp\
+		HumanB.cpp\
+		Weapon.cpp
 
 OBJS = ${SRC:.c=.o}
 

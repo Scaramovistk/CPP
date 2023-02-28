@@ -5,15 +5,17 @@
 #                                                     +:+ +:+         +:+      #
 #    By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2023/02/17 16:00:24 by gscarama          #+#    #+#              #
-#    Updated: 2023/02/23 16:21:39 by gabriel          ###   ########.fr        #
+#    Created: 2023/02/23 15:02:37 by gabriel           #+#    #+#              #
+#    Updated: 2023/02/23 15:50:17 by gabriel          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = Account
+NAME = zombie
 
-SRC =	Account.cpp\
-		tests.cpp
+SRC =	main.cpp\
+		Zombie.cpp\
+		newZombie.cpp\
+		ramdomChump.cpp\
 
 OBJS = ${SRC:.c=.o}
 
@@ -25,7 +27,7 @@ FLAGS = -Wall -Wextra -Werror
 	${CC} ${FLAGS} -c $< -o ${<:%.c=%.o}
 
 $(NAME):	${OBJS}
-	$(CC) $(FLAGS) ${OBJS} -o ${NAME}
+	$(CC) $(CFLAGS) ${OBJS} -o ${NAME}
 
 all:	$(NAME)
 
