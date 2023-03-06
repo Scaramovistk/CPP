@@ -3,16 +3,21 @@
 /*                                                        :::      ::::::::   */
 /*   Fixed.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
+/*   By: gscarama <gscarama@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/02 14:22:16 by gabriel           #+#    #+#             */
-/*   Updated: 2023/03/02 16:39:01 by gabriel          ###   ########.fr       */
+/*   Updated: 2023/03/06 13:29:29 by gscarama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
 
 int const Fixed::_fractionalBits = 8;
+
+Fixed::Fixed ( void ) : _rawBit{0}
+{
+	std::cout << "Default constructor called" << std::endl;
+}
 
 Fixed::Fixed(int const n)
 {
@@ -63,4 +68,9 @@ float Fixed::toFloat(void) const
 int Fixed::toInt(void) const
 {
 	return (this->_rawBit >> _fractionalBits);
+}
+
+std::ostream& operator<<(std::ostream &stream, Fixed const &obj) {
+	stream << obj.toFloat();
+	return (stream);
 }

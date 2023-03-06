@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Fixed.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
+/*   By: gscarama <gscarama@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/02 14:22:19 by gabriel           #+#    #+#             */
-/*   Updated: 2023/03/02 16:37:20 by gabriel          ###   ########.fr       */
+/*   Updated: 2023/03/06 13:31:00 by gscarama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,16 +23,18 @@ class Fixed
 		static int const _fractionalBits;
 
 	public:
-		explicit Fixed( int const n );
+		Fixed::Fixed ( void );
+		explicit Fixed( int const n ); //Explicit dont let c++ to use implicit convertion
 		explicit Fixed( float const f);
 		Fixed(Fixed const &other);
 		~Fixed( void );
 		Fixed& operator=(Fixed const &other);
 		int		getRawBits( void ) const;
 		void	setRawBits( int const raw );
-
 		float toFloat( void ) const;
 		int toInt( void ) const;
 };
+
+std::ostream &operator<<(std::ostream &stream, Fixed const &obj); //Overload the operator << to have a code cleaner
 
 #endif
