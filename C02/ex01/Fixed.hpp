@@ -1,41 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Harl.hpp                                           :+:      :+:    :+:   */
+/*   Fixed.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/28 11:53:21 by gabriel           #+#    #+#             */
-/*   Updated: 2023/02/28 15:06:40 by gabriel          ###   ########.fr       */
+/*   Created: 2023/03/02 14:22:19 by gabriel           #+#    #+#             */
+/*   Updated: 2023/03/02 16:37:20 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef HARL_HPP
-#define HARL_HPP
+#ifndef FIXED_HPP
+#define FIXED_HPP
 
 #include <iostream>
-#include <string>
-#define NBOP 4
+#include <cmath>
 
-class	Harl
+class Fixed
 {
-	typedef struct s_func
-	{
-		std::string	name;
-		void		(Harl::*ft)(void);
-	} t_func;
+	private:
+		int			_rawBit;
+		static int const _fractionalBits;
 
 	public:
-		Harl( void );
-		~Harl( void );
-		void	complain( std::string level);
+		explicit Fixed( int const n );
+		explicit Fixed( float const f);
+		Fixed(Fixed const &other);
+		~Fixed( void );
+		Fixed& operator=(Fixed const &other);
+		int		getRawBits( void ) const;
+		void	setRawBits( int const raw );
 
-	private:
-		t_func	_funcs[NBOP];
-		void	debug( void );
-		void	info( void );
-		void	warning( void );
-		void	error( void );
+		float toFloat( void ) const;
+		int toInt( void ) const;
 };
 
 #endif

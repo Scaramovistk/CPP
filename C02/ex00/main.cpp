@@ -1,41 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Harl.hpp                                           :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/28 11:53:21 by gabriel           #+#    #+#             */
-/*   Updated: 2023/02/28 15:06:40 by gabriel          ###   ########.fr       */
+/*   Created: 2023/02/28 15:11:06 by gabriel           #+#    #+#             */
+/*   Updated: 2023/03/02 13:39:49 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef HARL_HPP
-#define HARL_HPP
+#include "Fixed.hpp"
 
 #include <iostream>
-#include <string>
-#define NBOP 4
-
-class	Harl
+int	main( void )
 {
-	typedef struct s_func
-	{
-		std::string	name;
-		void		(Harl::*ft)(void);
-	} t_func;
+	Fixed a;
+	Fixed b( a );
+	Fixed c;
 
-	public:
-		Harl( void );
-		~Harl( void );
-		void	complain( std::string level);
+	c = b;
 
-	private:
-		t_func	_funcs[NBOP];
-		void	debug( void );
-		void	info( void );
-		void	warning( void );
-		void	error( void );
-};
+	std::cout << a.getRawBits() << std::endl;
+	std::cout << b.getRawBits() << std::endl;
+	std::cout << c.getRawBits() << std::endl;
 
-#endif
+	return 0;
+}

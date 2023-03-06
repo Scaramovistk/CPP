@@ -1,41 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Harl.hpp                                           :+:      :+:    :+:   */
+/*   Fixed.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/28 11:53:21 by gabriel           #+#    #+#             */
-/*   Updated: 2023/02/28 15:06:40 by gabriel          ###   ########.fr       */
+/*   Created: 2023/02/28 15:10:39 by gabriel           #+#    #+#             */
+/*   Updated: 2023/03/02 13:39:01 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef HARL_HPP
-#define HARL_HPP
+#ifndef FIXED_HPP
+#define FIXED_HPP
 
 #include <iostream>
-#include <string>
-#define NBOP 4
 
-class	Harl
+class Fixed
 {
-	typedef struct s_func
-	{
-		std::string	name;
-		void		(Harl::*ft)(void);
-	} t_func;
+	private:
+		int			_rawBit;
+		static int const _fractionalBits;
 
 	public:
-		Harl( void );
-		~Harl( void );
-		void	complain( std::string level);
-
-	private:
-		t_func	_funcs[NBOP];
-		void	debug( void );
-		void	info( void );
-		void	warning( void );
-		void	error( void );
+		Fixed( void );
+		Fixed(Fixed const &other);
+		~Fixed( void );
+		Fixed& operator=(Fixed const &other);
+		int		getRawBits( void ) const;
+		void	setRawBits( int const raw );
 };
 
 #endif

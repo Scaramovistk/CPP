@@ -6,7 +6,7 @@
 /*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/28 11:53:26 by gabriel           #+#    #+#             */
-/*   Updated: 2023/02/28 14:34:31 by gabriel          ###   ########.fr       */
+/*   Updated: 2023/02/28 15:07:36 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,9 @@ Harl::Harl(void)
 	this->_funcs[3].ft = &Harl::error;
 }
 
-void Harl::debug(void)
+Harl::~Harl(void) {}
+
+void	Harl::debug(void)
 {
 	std::cout << "[ DEBUG ]" << std::endl;
 	std::cout << "I love having extra bacon for my"
@@ -35,7 +37,7 @@ void Harl::debug(void)
 	<< "I really do !" << std::endl;
 }
 
-void Harl::info(void)
+void	Harl::info(void)
 {
 	std::cout << "[ INFO ]" << std::endl;
 	std::cout << "I cannot believe adding extra bacon costs more money."
@@ -43,20 +45,20 @@ void Harl::info(void)
 	<< "If you did, I wouldn't be asking for more !" << std::endl;
 }
 
-void Harl::warning(void)
+void	Harl::warning(void)
 {
 	std::cout << "[ WARNING ]" << std::endl;
 	std::cout << "I think I deserve to have some extra bacon for free."
 	<< "I've been coming for years whereas you started working here since last month." << std::endl;
 }
 
-void Harl::error(void)
+void	Harl::error(void)
 {
 	std::cout << "[ ERROR ]" << std::endl;
 	std::cout << "This is unacceptable ! I want to speak to the manager now." << std::endl;
 }
 
-void Harl::complain(std::string level)
+void	Harl::complain(std::string level)
 {
 	int	row;
 

@@ -1,41 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Harl.hpp                                           :+:      :+:    :+:   */
+/*   test.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/28 11:53:21 by gabriel           #+#    #+#             */
-/*   Updated: 2023/02/28 15:06:40 by gabriel          ###   ########.fr       */
+/*   Created: 2023/03/03 12:53:12 by gabriel           #+#    #+#             */
+/*   Updated: 2023/03/03 12:55:39 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef HARL_HPP
-#define HARL_HPP
-
 #include <iostream>
-#include <string>
-#define NBOP 4
 
-class	Harl
+int main (void)
 {
-	typedef struct s_func
-	{
-		std::string	name;
-		void		(Harl::*ft)(void);
-	} t_func;
+	int i = 5;
+	int j = 10;
+	float k;
 
-	public:
-		Harl( void );
-		~Harl( void );
-		void	complain( std::string level);
+	k = i << j;
 
-	private:
-		t_func	_funcs[NBOP];
-		void	debug( void );
-		void	info( void );
-		void	warning( void );
-		void	error( void );
-};
+	std::cout << "Value: "<< k << std::endl;
 
-#endif
+	return (0);
+}
