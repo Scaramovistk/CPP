@@ -6,7 +6,7 @@
 /*   By: gscarama <gscarama@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/09 13:53:09 by gscarama          #+#    #+#             */
-/*   Updated: 2023/02/17 15:26:19 by gscarama         ###   ########.fr       */
+/*   Updated: 2023/03/10 11:12:36 by gscarama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ void	showContact(PhoneBook phoneBook, int index)
 		std::cout << "Type the Index to show your Contact full information" << std::endl;
 		std::getline(std::cin, nbr);
 		row = atoi(nbr.c_str()) - 1;
-		if (row >= 0 && row <=7 && row)
+		if (row >= 0 && row <=7)
 		{
 			contact = phoneBook.takeConcact(row);
 			contact.printContact();
