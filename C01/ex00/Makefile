@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+         #
+#    By: gscarama <gscarama@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/23 15:02:37 by gabriel           #+#    #+#              #
-#    Updated: 2023/02/23 15:50:17 by gabriel          ###   ########.fr        #
+#    Updated: 2023/03/13 12:47:26 by gscarama         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@ NAME = zombie
 SRC =	main.cpp\
 		Zombie.cpp\
 		newZombie.cpp\
-		ramdomChump.cpp\
+		randomChump.cpp\
 
 OBJS = ${SRC:.c=.o}
 

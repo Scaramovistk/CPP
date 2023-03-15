@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ReplaceStr.hpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
+/*   By: gscarama <gscarama@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/25 14:05:51 by gabriel           #+#    #+#             */
-/*   Updated: 2023/02/27 13:39:41 by gabriel          ###   ########.fr       */
+/*   Updated: 2023/03/13 13:17:21 by gscarama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef REPlACESTR_HPP
+#ifndef REPLACESTR_HPP
 #define REPLACESTR_HPP
 
 #include <iostream>

@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
+/*   By: gscarama <gscarama@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/25 13:08:47 by gabriel           #+#    #+#             */
-/*   Updated: 2023/02/27 14:26:20 by gabriel          ###   ########.fr       */
+/*   Updated: 2023/03/13 13:09:47 by gscarama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ReplaceStr.hpp"
 
-int	main(int argc, char **argv) //Maybe the file should not have a extra bakelike
+int	main(int argc, char **argv)
 {
 	int			error;
 

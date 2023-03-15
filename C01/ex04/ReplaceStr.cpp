@@ -3,17 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   ReplaceStr.cpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
+/*   By: gscarama <gscarama@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/25 14:05:54 by gabriel           #+#    #+#             */
-/*   Updated: 2023/02/27 15:21:20 by gabriel          ###   ########.fr       */
+/*   Updated: 2023/03/13 13:26:11 by gscarama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ReplaceStr.hpp"
 
 ReplaceStr::ReplaceStr(std::string fname, std::string s1, std::string s2)
-	: _fname{fname}, _s1{s1}, _s2{s2}
+	: _fname(fname), _s1(s1), _s2(s2)
 {
 	std::cout << "Opening your file..." << std::endl;
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   HumanB.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
+/*   By: gscarama <gscarama@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/25 11:30:15 by gabriel           #+#    #+#             */
-/*   Updated: 2023/02/25 13:07:18 by gabriel          ###   ########.fr       */
+/*   Updated: 2023/03/13 13:07:23 by gscarama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	armed = 0;
 
-HumanB::HumanB(std::string name) : _name{name}
+HumanB::HumanB(std::string name) : _name(name)
 {
 	std::cout << this->_name << " wake up" << std::endl;
 }

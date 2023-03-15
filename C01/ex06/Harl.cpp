@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Harl.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
+/*   By: gscarama <gscarama@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/28 11:53:26 by gabriel           #+#    #+#             */
-/*   Updated: 2023/02/28 15:07:36 by gabriel          ###   ########.fr       */
+/*   Updated: 2023/03/13 13:38:55 by gscarama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,15 +70,15 @@ void	Harl::complain(std::string level)
 		case 0:
 			(this->*_funcs[0].ft)();
 			std::cout << std::endl;
-			[[fallthrough]];
+			__attribute__((fallthrough));
 		case 1:
 			(this->*_funcs[1].ft)();
 			std::cout << std::endl;
-			[[fallthrough]];
+			__attribute__((fallthrough));
 		case 2:
 			(this->*_funcs[2].ft)();
 			std::cout << std::endl;
-			[[fallthrough]];
+			__attribute__((fallthrough));
 		case 3:
 			(this->*_funcs[3].ft)();
 			std::cout << std::endl;

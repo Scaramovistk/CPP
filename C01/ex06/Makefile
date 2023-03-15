@@ -3,14 +3,14 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+         #
+#    By: gscarama <gscarama@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/28 11:53:18 by gabriel           #+#    #+#              #
-#    Updated: 2023/02/28 14:37:31 by gabriel          ###   ########.fr        #
+#    Updated: 2023/03/13 13:40:32 by gscarama         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = HarlFilter
+NAME = harlFilter
 
 SRC =	main.cpp\
 		Harl.cpp
