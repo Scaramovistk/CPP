@@ -6,16 +6,17 @@
 #    By: gscarama <gscarama@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/10 11:42:10 by gscarama          #+#    #+#              #
-#    Updated: 2023/03/16 14:11:36 by gscarama         ###   ########.fr        #
+#    Updated: 2023/03/17 11:57:34 by gscarama         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = FragTrap
+NAME = DiamondTrap
 
 SRC =	main.cpp\
 		ClapTrap.cpp \
 		ScavTrap.cpp \
-		FragTrap.cpp
+		FragTrap.cpp \
+		DiamondTrap.cpp
 
 OBJS = ${SRC:.c=.o}
 

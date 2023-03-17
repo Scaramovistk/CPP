@@ -6,7 +6,7 @@
 #    By: gscarama <gscarama@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/10 11:42:10 by gscarama          #+#    #+#              #
-#    Updated: 2023/03/10 14:28:30 by gscarama         ###   ########.fr        #
+#    Updated: 2023/03/16 12:31:20 by gscarama         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,7 @@ OBJS = ${SRC:.c=.o}
 
 CC = c++
 RM = rm -rf
-FLAGS = -Wall -Wextra -Werror
+FLAGS = -Wall -Wextra -Werror -std=c++98
 
 %.o:	%.c
 	${CC} ${FLAGS} -c $< -o ${<:%.c=%.o}

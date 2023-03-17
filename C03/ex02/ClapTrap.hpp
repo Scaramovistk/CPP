@@ -6,7 +6,7 @@
 /*   By: gscarama <gscarama@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/10 11:42:01 by gscarama          #+#    #+#             */
-/*   Updated: 2023/03/10 14:25:26 by gscarama         ###   ########.fr       */
+/*   Updated: 2023/03/16 12:34:19 by gscarama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,20 +27,22 @@ class ClapTrap
 		ClapTrap(ClapTrap const &other);
 		~ClapTrap(void);
 		ClapTrap& operator=(ClapTrap const &other);
-		std::string getName(void) const;
-		unsigned int getHitPts(void) const;
-		unsigned int getEngy(void) const;
-		unsigned int getDamage(void) const;
+		std::string		getName(void) const;
+		unsigned int	getHitPts(void) const;
+		unsigned int	getEngy(void) const;
+		unsigned int	getDamage(void) const;
+		std::string		getClass( void ) const;
 		void	setName(std::string const name);
 		void	setHP(unsigned int const HD);
 		void	setEnergy(unsigned int const energy);
 		void	setDamage(unsigned int const damage);
 
-	private:
-		std::string _name;
+	protected:
+		std::string	_name;
 		int			_hitPoints;
 		int			_energyPoints;
 		int			_attackDamage;
+		std::string	_class;
 };
 
 std::ostream &operator<<(std::ostream &stream, ClapTrap const &obj);

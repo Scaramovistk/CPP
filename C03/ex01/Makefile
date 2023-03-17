@@ -6,11 +6,11 @@
 #    By: gscarama <gscarama@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/10 11:42:10 by gscarama          #+#    #+#              #
-#    Updated: 2023/03/13 13:47:17 by gscarama         ###   ########.fr        #
+#    Updated: 2023/03/16 12:31:23 by gscarama         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = ClapTrap
+NAME = ScavTrap
 
 SRC =	main.cpp\
 		ClapTrap.cpp \
@@ -20,7 +20,7 @@ OBJS = ${SRC:.c=.o}
 
 CC = c++
 RM = rm -rf
-FLAGS = -Wall -Wextra -Werror
+FLAGS = -Wall -Wextra -Werror -std=c++98
 
 %.o:	%.c
 	${CC} ${FLAGS} -c $< -o ${<:%.c=%.o}
