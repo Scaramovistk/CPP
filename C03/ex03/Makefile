@@ -22,7 +22,7 @@ OBJS = ${SRC:.c=.o}
 
 CC = c++
 RM = rm -rf
-FLAGS = -Wall -Wextra -Werror -std=c++98
+FLAGS = -std=c++98
 
 %.o:	%.c
 	${CC} ${FLAGS} -c $< -o ${<:%.c=%.o}

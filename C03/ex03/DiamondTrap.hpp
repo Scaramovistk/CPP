@@ -19,13 +19,21 @@
 
 class DiamondTrap : public FragTrap, public ScavTrap
 {
+	private:
+		std::string _name;
+
 	public:
-	DiamondTrap( void );
-	DiamondTrap( std::string name );
-	DiamondTrap( DiamondTrap const &ohter );
-	~DiamondTrap( void );
-	DiamondTrap& operator=( DiamondTrap const &ohter );
-	void whoAmI( void );
+		DiamondTrap( void );
+		DiamondTrap( std::string name );
+		DiamondTrap( DiamondTrap const &other );
+		~DiamondTrap( void );
+		DiamondTrap& operator=( DiamondTrap const &other );
+		void whoAmI( void );
+
+		using FragTrap::_hitPoints;
+		using ScavTrap::_energyPoints;
+		using FragTrap::_attackDamage;
+		using ScavTrap::attack;
 };
 
 #endif

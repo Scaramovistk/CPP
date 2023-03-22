@@ -10,47 +10,29 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ScavTrap.hpp"
-#include "FragTrap.hpp"
+#include "DiamondTrap.hpp"
 
 int main (void)
 {
-	std::string p1 = "Cat";
-	std::string p2 = "Mouse";
-	FragTrap cat(p1);
-	ClapTrap mouse(p2);
-	ScavTrap def;
+	ClapTrap	one("Toto");
+	DiamondTrap	four("D");
+	std::string	target;
 
-	cat.setDamage(8);
-	mouse.setDamage(8);
+	target = "Jo";
+	std::cout << "\n+++++ STANDARD TESTS +++++\n";
+	four.guardGate();
+	four.highFivesGuys();
+	four.highFivesGuys(one);
+	four.attack("Cat");
+	four.attack("Cat");
+	four.beRepaired(1);
+	four.whoAmI();
 
-	std::cout << std::endl << cat << std::endl << mouse << std::endl << def << std::endl; 
+	std::cout << "\n+++++ SOME EXTRA TESTS +++++\n";
+	DiamondTrap	five(four);
+	DiamondTrap	six;
 
-	cat.attack(p2);
-	mouse.takeDamage(cat.getDamage());
-
-	mouse.attack(p1);
-	cat.takeDamage(mouse.getDamage());
-
-	cat.beRepaired(5);
-
-	mouse.attack(p1);
-	cat.takeDamage(mouse.getDamage());
-
-	std::cout << "-----Mysterios sound----" << std::endl << "A stranger animy appears" << std::endl;
-
-	cat.highFivesGuys(def);
-	def.attack(p2);
-
-	mouse.takeDamage(def.getDamage());
-
-	for (int row = 0; row < 9; row++)
-		def.beRepaired(1);
-
-	def.attack(def.getName());
-	def.takeDamage(def.getDamage());
-	
-	std::cout << "***** The peace is back again ******" << std::endl;
-
+	five = six;
+	std::cout << std::endl;
 	return (0);
 }
