@@ -6,7 +6,7 @@
 /*   By: gscarama <gscarama@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/10 11:41:48 by gscarama          #+#    #+#             */
-/*   Updated: 2023/03/16 14:12:51 by gscarama         ###   ########.fr       */
+/*   Updated: 2023/03/22 12:49:56 by gscarama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,16 +40,7 @@ int main (void)
 	std::cout << "-----Mysterios sound----" << std::endl << "A stranger animy appears" << std::endl;
 
 	cat.highFivesGuys(def);
-	def.attack(p2);
 
-	mouse.takeDamage(def.getDamage());
-
-	for (int row = 0; row < 9; row++)
-		def.beRepaired(1);
-
-	def.attack(def.getName());
-	def.takeDamage(def.getDamage());
-	
 	std::cout << "***** The peace is back again ******" << std::endl;
 
 	return (0);

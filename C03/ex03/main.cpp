@@ -6,7 +6,7 @@
 /*   By: gscarama <gscarama@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/10 11:41:48 by gscarama          #+#    #+#             */
-/*   Updated: 2023/03/16 14:12:51 by gscarama         ###   ########.fr       */
+/*   Updated: 2023/03/22 12:51:25 by gscarama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,25 +14,18 @@
 
 int main (void)
 {
-	ClapTrap	one("Toto");
-	DiamondTrap	four("D");
-	std::string	target;
+	ClapTrap	base("Thomas");
+	DiamondTrap	dion("Dion");
+	DiamondTrap	c_dion(dion);
 
-	target = "Jo";
-	std::cout << "\n+++++ STANDARD TESTS +++++\n";
-	four.guardGate();
-	four.highFivesGuys();
-	four.highFivesGuys(one);
-	four.attack("Cat");
-	four.attack("Cat");
-	four.beRepaired(1);
-	four.whoAmI();
+	std::cout << std::endl << base << std::endl << dion << std::endl; 
 
-	std::cout << "\n+++++ SOME EXTRA TESTS +++++\n";
-	DiamondTrap	five(four);
-	DiamondTrap	six;
+	std::cout << "******TEST******" << std::endl;
+	c_dion.whoAmI();
+	c_dion.beRepaired(1);
+	c_dion.attack("Cat");
+	c_dion.guardGate();
+	c_dion.highFivesGuys(base);
 
-	five = six;
-	std::cout << std::endl;
 	return (0);
 }

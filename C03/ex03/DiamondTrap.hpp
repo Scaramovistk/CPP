@@ -6,7 +6,7 @@
 /*   By: gscarama <gscarama@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/17 10:36:55 by gscarama          #+#    #+#             */
-/*   Updated: 2023/03/17 11:55:14 by gscarama         ###   ########.fr       */
+/*   Updated: 2023/03/22 12:23:50 by gscarama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 #include "FragTrap.hpp"
 #include "ScavTrap.hpp"
 
-class DiamondTrap : public FragTrap, public ScavTrap
+class DiamondTrap : public ScavTrap, public FragTrap
 {
 	private:
 		std::string _name;
@@ -29,9 +29,10 @@ class DiamondTrap : public FragTrap, public ScavTrap
 		~DiamondTrap( void );
 		DiamondTrap& operator=( DiamondTrap const &other );
 		void whoAmI( void );
+		std::string getName(void) const;
 
-		using FragTrap::_hitPoints;
 		using ScavTrap::_energyPoints;
+		using FragTrap::_hitPoints;
 		using FragTrap::_attackDamage;
 		using ScavTrap::attack;
 };
